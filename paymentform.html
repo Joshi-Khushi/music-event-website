@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="formstyle.css">
+	<link rel="formstyle" href="formstyle.css">
+	<title>Payment Form</title>
+</head>
+<body>
+	<div class="container">
+		<h1 class="main_heading">Payment Form</h1>
+		<hr>
+
+	<form>
+		<h3>Contact Information</h3>
+		<fieldset> <!-- fieldset groups related by drawing a box -->
+			<legend>User Details</legend> <!-- legend is used to give a caption for fieldset -->
+			
+			<p>First Name: *<input type="text" name="fname" placeholder="Enter your first name" required></p>
+			<p>Last Name: *<input type="text" name="lname" placeholder="Enter your last name" required></p>
+			<p>Gender: 
+				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female
+				<input type="radio" name="gender" value="others">Others
+			</p>
+			<p>Contact: *<input type="number" name="contact" required></p>
+			<p>Email: *<input type="email" name="email" required></p>
+			<p>Address: <br>
+				<textarea name="address" id="address" rows="5" cols="25" placeholder="Enter your address here"></textarea></p>
+			<p>Pincode: <input type="number" name="pincode"></p>
+		</fieldset>
+		<br>
+		
+		<h3>Payment Information</h3>
+		<fieldset>
+			<legend>Payment Details</legend>
+			
+			<p>Card Type: *
+				<select name="cardtype" id="cardtype" required>
+					<option value="">--select card type--</option>
+					<option value="visa">Visa</option>
+					<option value="rupay">Rupay</option>
+					<option value="master card">Master Card</option>
+				</select>
+			</p>
+			<p>Card Number: *<input type="number" name="cardnumber" id="cardnumber" required></p>
+			<p>Expiration Date: <input type="date" name="expdate" id="expdate"></p>
+			<p>CVV: *<input type="password" name="cvv" id="cvv" required></p>
+		</fieldset>
+
+		<br><br>
+		
+		<input type="submit" value="Pay" > &nbsp &nbsp &nbsp
+		<input type="reset" value="Reset">
+
+	</form>
+</div>
+</body>
+</html>
